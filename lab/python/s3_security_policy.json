@@ -1,0 +1,19 @@
+{
+    "Version": "2008-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": [
+                "arn:aws:s3:::zbartest1/*",
+                "arn:aws:s3:::zbartest1"
+            ],
+            "Condition": {
+                "IpAddress": {
+                    "aws:SourceIp": "1.174.64.52/32"
+                }
+            }
+        }
+    ]
+}

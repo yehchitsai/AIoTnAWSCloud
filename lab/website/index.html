@@ -1,0 +1,31 @@
+<html>  
+<head>  
+<meta content="text/html; charset=utf-8">  
+<title>AJAX JSON by Javatpoint</title>  
+<script src="scripts/jquery-3.6.0.min.js"></script>
+<script type="application/javascript">  
+	window.COFFEE_CONFIG = {
+		API_GW_BASE_URL_STR: null,
+		COGNITO_LOGIN_BASE_URL_STR: null
+	};
+		
+	function loadAllItems(){
+		$("[data-role='browse_pastries_content'] > section").remove();
+		if(window.COFFEE_CONFIG.API_GW_BASE_URL_STR === null){
+			$.get("date_time.json", printItems);
+		}else{
+			$.get(window.COFFEE_CONFIG.API_GW_BASE_URL_STR + "/products", printItems);
+		}
+	}
+	function printItems(response){
+    document.getElementById("date").innerHTML =  response.date;  
+    document.getElementById("time").innerHTML = response.time;  
+	}
+</script>
+</head>  
+<body>  
+Date: <span id="date"></span><br/>  
+Time: <span id="time"></span><br/>  
+<button type="button" onclick="loadAllItems()">Load Information</button>  
+</body>  
+</html>  
