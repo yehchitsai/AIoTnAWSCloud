@@ -14,8 +14,8 @@
         - [第五部分 系統整合](#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86-%E7%B3%BB%E7%B5%B1%E6%95%B4%E5%90%88)
 
 
-## 所需相關知識
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+## 所需相關知識 
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
 * Python 基礎概念
 * 介紹單晶片 ESP32-CAM
 * 使用 MicroPython 開發ESP32-CAM
@@ -29,17 +29,20 @@
 * HTTP Request/Response
 
 ## 所需資源
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 * AWS 帳號 - 建議可以申請[AWS 免費方案](https://aws.amazon.com/tw/free/free-tier-faqs/) 
 * 或 AWS Academy Learner Lab 帳號 - 這是針對有加入AWS Academy專案的學校，也是免費的
 * ESP32-CAM 與 CH340 下載轉接頭
 
 ## 本系列文章
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 這本系列文章規劃成 5 個部分，從 Python 基礎開始，接著使用 ESP32-CAM 的 microPython，接著在 AWS 上使用AWS Lambda 編寫無伺服器的 Python 程式，來完成文字與人臉辨識的功能，並透過每個單元的實作讓你一步一步完成這份專案：
 
 ### 第一部分 Python 基礎概念
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 了解 Python 的基礎語法與開發環境
   - [Python 說明與開發環境](https://ithelp.ithome.com.tw/articles/10343895)
   - [Python 基礎語法](https://ithelp.ithome.com.tw/articles/10344068)
@@ -47,7 +50,8 @@
   - [Python 分支控制](https://ithelp.ithome.com.tw/articles/10344336)
   - [Python 函數與模組](https://ithelp.ithome.com.tw/articles/10344487)
 ### 第二部分 ESP32-CAM
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 介紹單晶片 ESP32-CAM 的出處、結構與基礎程式應用。
   * [單晶片 ESP32-CAM](https://ithelp.ithome.com.tw/articles/10344613)
   * [使用 MicroPython 開發 ESP32-CAM - Thonny](https://ithelp.ithome.com.tw/articles/10344722)
@@ -57,13 +61,15 @@
   * [使用 MicroPython 安裝新模組與使用](https://ithelp.ithome.com.tw/articles/10345284)
   * [使用 MicroPython 拍照](https://ithelp.ithome.com.tw/articles/10345443)
 ### 第三部分 網際網路基礎
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 說明網頁運作基本原理。
   - 網際網路模型
   - HTTP 請求/回應格式
   - HTTP 請求/回應範例
 ### 第四部分 AWS 服務
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 介紹本次應用中使用到的 AWS 的服務，包含了 API 呼叫、運算服務、儲存、資料庫與影像處理的人工智慧(AI)應用等。
   * AWS 雲端基礎
   * AWS 雲端安全
@@ -83,7 +89,8 @@
   * 實驗：文字辨識從 Amazon S3 讀取
   * 實驗：文字辨識從客戶端上傳
 ### 第五部分 系統整合
-[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#bottom)
+[<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 透過 API Gateway 整合 ESP32-CAM 與 AWS 服務，並透過網頁觀看結果。
   - 定義 REST API
   - 實驗：後端-使用 postman 檢驗結果
