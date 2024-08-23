@@ -13,7 +13,7 @@
 		if(window.COFFEE_CONFIG.API_GW_BASE_URL_STR === null){
 			$.get("date_time.json", printItems);
 		}else{
-			$.get(window.COFFEE_CONFIG.API_GW_BASE_URL_STR + "/products", printItems);
+			$.get(window.COFFEE_CONFIG.API_GW_BASE_URL_STR, printItems);
 		}
 	}
 	function printItems(response){
