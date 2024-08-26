@@ -10,7 +10,7 @@ dyn_resource = boto3.resource("dynamodb")
 logger = logging.getLogger(__name__)
 s3_client = boto3.client("s3")
 S3_BUCKET_NAME = 'aiotnawscloud0821'
-dest_table_name = 'studnets'
+dest_table_name = 'students'
 object_key = "student_info.xlsx"  # replace object key
 
 # check the table whether exists
