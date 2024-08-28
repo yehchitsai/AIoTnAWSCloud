@@ -8,8 +8,8 @@ s3_client = boto3.client('s3')
 
 bucket_name = "aiotnawscloud0821"
 bucket_prefix = 'images/'
-one_person_image = "lai-ching-te.jpg"
-one_person_image_box = "lai-ching-te-box.jpg"
+one_person_image = "target.jpg"
+one_person_image_box = "target-box.jpg"
 
 #step 1. 創建集合 
 collection_id = 'Collection'
