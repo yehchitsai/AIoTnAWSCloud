@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Web 用戶端</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+		<table align="center" width="80%" border="2">
+			<tr>
+				<td>
+					車牌圖像區
+					<div class="container">
+      			<img src="images/esp32-cam2s3.jpg" id="uPyImage">
+    			</div>
+				</td>
+				<td>
+					<div>辨識選項</div>
+					<div>辨識結果表格</div>
+				</td>
+			</tr>
+		</table>
+    <h1>Hello ESP32-CAM</h1>
+    Display Image from ESP32-CAM
+    <div class="container">
+      <img src="image.jpg" id="uPyImage">
+	  <img src="boxed_image.jpg" id="scanImage">
+    </div>
+    <script>
+      var uPyImage = document.getElementById("uPyImage");
+      // Function to refresh the image
+      function imageRefresh() {
+        var imageSrc = "images/esp32-cam2s3.jpg";
+        uPyImage.src = imageSrc + "?t=" + new Date().getTime();
+      }
+
+      // Refresh the image every 2 seconds
+      setInterval(imageRefresh, 2000);
+    </script>
+  </body>
+</html>
