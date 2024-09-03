@@ -30,8 +30,9 @@
 				<td>
 					車牌圖像區
 					<div class="container">
-      			<img src="https://aiotnawscloud0902.s3.amazonaws.com/images/esp32-cam2s3.jpg" id="uPyImage">
+      			<img src="../source/esp32-cam2s3.jpg" id="uPyImage">
     			</div>
+					自動更新照片<input type="checkbox" id="autoplay" value="0">
 				</td>
 				<td>
 					<div>
@@ -76,15 +77,29 @@
 	        .catch(error => console.error(error));
 		     });
 				 
+				 $('#autoplay').click(function() {
+				 	var state = ($(this).is(':checked')) ? '1' : '0';
+					if (state=='1')
+						var refreshIntervalId = setInterval(imageRefresh, 2000);
+					else
+						clearInterval(refreshIntervalId);
+				 })
+				 
 	      $('#get_result').click(function() {
+					const timeElapsed = Date.now();
+					const today = new Date(timeElapsed);
+					today.setUTCHours(today.getUTCHours() + 6)
+					start_time = today.toISOString().substr(0,19);
+					today.setUTCHours(today.getUTCHours() + 2)
+					end_time = today.toISOString().substr(0,19);
         fetch('https://2s3g37io60.execute-api.us-east-1.amazonaws.com/dev/query_record', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                start_time: "2024-08-30T08:40:41",
-							  end_time: "2024-09-30T08:40:41"
+                start_time: start_time,
+							  end_time: end_time
             })
         })
         .then(response => response.json())
@@ -101,7 +116,7 @@
       var uPyImage = document.getElementById("uPyImage");
       // Function to refresh the image
       function imageRefresh() {
-        var imageSrc = "https://aiotnawscloud0902.s3.amazonaws.com/images/esp32-cam2s3.jpg";
+        var imageSrc = "../source/esp32-cam2s3.jpg";
         uPyImage.src = imageSrc + "?t=" + new Date().getTime();
       }
 
