@@ -37,6 +37,11 @@ def lambda_handler(event, context):
     finally:
         return {
             'statusCode': 200,
+            "headers": {
+                "Access-Control-Allow-Headers": 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+                "Access-Control-Allow-Methods": 'GET',
+                "Access-Control-Allow-Origin": '*'
+            },              
             'body': json.dumps(result)
         }
   else:
@@ -44,5 +49,10 @@ def lambda_handler(event, context):
     result["status"] = "fail-method error"
     return {
         'statusCode': 200,
+        "headers": {
+            "Access-Control-Allow-Headers": 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
+            "Access-Control-Allow-Methods": 'GET',
+            "Access-Control-Allow-Origin": '*'
+        },          
         'body': json.dumps(result)
     }

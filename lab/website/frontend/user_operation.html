@@ -3,6 +3,24 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script src="../scripts/jquery-3.6.0.min.js"></script>		
+		<style>  
+		table {  
+		border-collapse: collapse;  
+		width: 100%;  
+		}  
+  
+		th, td {  
+		border: 1px solid #ddd;  
+		padding: 8px;  
+		text-align: left;  
+		}  
+  
+		th {  
+		background-color: #4CAF50;  
+		color: white;  
+		}  
+		</style>
     <title>Web 用戶端</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
@@ -12,31 +30,83 @@
 				<td>
 					車牌圖像區
 					<div class="container">
-      			<img src="images/esp32-cam2s3.jpg" id="uPyImage">
+      			<img src="https://aiotnawscloud0902.s3.amazonaws.com/images/esp32-cam2s3.jpg" id="uPyImage">
     			</div>
 				</td>
 				<td>
-					<div>辨識選項</div>
-					<div>辨識結果表格</div>
+					<div>
+						辨識選項<input type="checkbox" id="recognition" value="1">
+						<div id="response"></div>
+					</div>
+					<div id="get_result">辨識結果表格</div>
+					<div id="table-container"></div>  
 				</td>
 			</tr>
 		</table>
-    <h1>Hello ESP32-CAM</h1>
-    Display Image from ESP32-CAM
-    <div class="container">
-      <img src="image.jpg" id="uPyImage">
-	  <img src="boxed_image.jpg" id="scanImage">
-    </div>
     <script>
+			function generateTable(data) {  
+			  let table = '<table>';  
+			  table += '<tr><th>拍照日期</th><th>車號</th><th>照片</th></tr>';  
+			  data.forEach(item => {  
+			    table += `<tr><td>${item.date_time}</td><td>${item.detected_text}</td><td><img src='${item.image_url}'></td></tr>`;  
+			  });  
+			  table += '</table>';  
+			  return table;  
+			}  
+
+		  $(document).ready(function() {
+		      $('#recognition').click(function() {
+
+		      var state = ($(this).is(':checked')) ? '1' : '0';
+					console.log(state)
+	        fetch('https://2s3g37io60.execute-api.us-east-1.amazonaws.com/dev/set_recognition', {
+	            method: 'POST',
+	            headers: {
+	                'Content-Type': 'application/json'
+	            },
+	            body: JSON.stringify({
+	                enable: state
+	            })
+	        })
+	        .then(response => response.json())
+	        .then(data => {
+	            console.log(data);
+							console.log(data.status);
+	        })
+	        .catch(error => console.error(error));
+		     });
+				 
+	      $('#get_result').click(function() {
+        fetch('https://2s3g37io60.execute-api.us-east-1.amazonaws.com/dev/query_record', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                start_time: "2024-08-30T08:40:41",
+							  end_time: "2024-09-30T08:40:41"
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+					const tableContainer = document.getElementById('table-container');  
+					tableContainer.innerHTML = generateTable(data.results);  
+						console.log(data.results);
+        })
+        .catch(error => console.error(error));
+	     });
+			 				 
+		  });
+						
       var uPyImage = document.getElementById("uPyImage");
       // Function to refresh the image
       function imageRefresh() {
-        var imageSrc = "images/esp32-cam2s3.jpg";
+        var imageSrc = "https://aiotnawscloud0902.s3.amazonaws.com/images/esp32-cam2s3.jpg";
         uPyImage.src = imageSrc + "?t=" + new Date().getTime();
       }
 
       // Refresh the image every 2 seconds
-      setInterval(imageRefresh, 2000);
+      //setInterval(imageRefresh, 2000);
     </script>
   </body>
 </html>
