@@ -4,9 +4,9 @@ from io import BytesIO
 rekognition_client = boto3.client('rekognition')
 s3_client = boto3.client('s3')
 
-bucket_name = "aiotnawscloud0821"
+bucket_name = "BUCKET_NAME"
 bucket_prefix = 'images/'
-target_image = "yehchitsai.jpg"
+target_image = "scooter_1.jpg"
 
 image_content = s3_client.get_object(Bucket=bucket_name, Key=bucket_prefix + target_image)['Body'].read()
 
