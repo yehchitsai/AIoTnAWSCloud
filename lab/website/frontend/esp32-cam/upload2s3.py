@@ -22,8 +22,7 @@ wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
 if not wlan.isconnected():
     print('connecting to network...')
-    #wlan.connect('Mi10-yeh', '0929377030')
-    wlan.connect('yeh', '0929377030')
+    wlan.connect('SSID', 'PASSWORD')
     while not wlan.isconnected():
         pass
 print('network config: ', wlan.ifconfig())
@@ -58,15 +57,13 @@ else:
 #
 while True:
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    url = 'https://2s3g37io60.execute-api.us-east-1.amazonaws.com/dev/upload_image'
-    # 4. 拍照
-    # 5.upload image to S3
-#r = requests.post(url, data=json.dumps(data), headers=headers)
+    url = 'API_upload_image'
+    # 4. 拍照並上傳影像到 S3
     led_blink_timed(timer, led_pwm, RUN)
     r = requests.post(url, data=json.dumps({"key": base64.encodebytes(camera.capture())}), headers=headers)
     print(r.text,dir(r))
     led_blink_timed(timer, led_pwm, STANDBY)
     time.sleep(2)
-    #gc.collect()
+    gc.collect()
 camera.deinit()
 

@@ -5,7 +5,7 @@ from botocore.exceptions import ClientError
 import base64
 
 # 存放圖片的 S3 存儲桶 
-output_bucket = 'aiotnawscloud0821'
+output_bucket = 'BUCKET_NAME'
 # 存放在 S3 存儲桶中的檔案名稱
 s3_key_value = 'source/esp32-cam2s3.jpg'
 s3_client = boto3.client('s3')
