@@ -6,7 +6,7 @@ from PIL import Image, ImageDraw
 rekognition_client = boto3.client('rekognition')
 s3_client = boto3.client('s3')
 
-bucket_name = "aiotnawscloud0821"
+bucket_name = "BUCKET_NAME"
 bucket_prefix = 'images/'
 one_person_image = "target.jpg"
 one_person_image_box = "target-box.jpg"
