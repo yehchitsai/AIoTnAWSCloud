@@ -9,7 +9,7 @@ import time
 dyn_resource = boto3.resource("dynamodb")
 logger = logging.getLogger(__name__)
 s3_client = boto3.client("s3")
-S3_BUCKET_NAME = 'aiotnawscloud0821'
+S3_BUCKET_NAME = 'BUCKET_NAME'
 dest_table_name = 'students'
 object_key = "student_info.xlsx"  # replace object key
 

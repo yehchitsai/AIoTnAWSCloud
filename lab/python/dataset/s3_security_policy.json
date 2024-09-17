@@ -6,12 +6,12 @@
             "Principal": "*",
             "Action": "s3:GetObject",
             "Resource": [
-                "arn:aws:s3:::[bucket_name]/*",
-                "arn:aws:s3:::[bucket_name]"
+                "arn:aws:s3:::BUCKET_NAME/*",
+                "arn:aws:s3:::BUCKET_NAME"
             ],
             "Condition": {
                 "IpAddress": {
-                    "aws:SourceIp": "[my_public_ip]/32"
+                    "aws:SourceIp": "MY_PUBLIC_IP/32"
                 }
             }
         }
