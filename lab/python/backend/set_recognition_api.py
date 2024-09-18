@@ -7,14 +7,16 @@ logger = logging.getLogger(__name__)
 dyn_resource = boto3.resource("dynamodb")
 table_name = 'cfg_table'
 config_table = dyn_resource.Table(table_name)
-result = {"status":"fail" }
 
 def lambda_handler(event, context):
+  result = {"status":"fail" }
+  print(event['httpMethod'])
   requestMethod = event['httpMethod']
   # HTTP 請求方式為 POST 才做後續處理
   if requestMethod=='POST':
     # 設定車牌辨識選項
     try:
+        print(event['body'])
         requestBody = json.loads(event['body'])
         result["status"] = "fail-參數有誤"
         if requestBody.get('enable'):
@@ -43,7 +45,7 @@ def lambda_handler(event, context):
                 "Access-Control-Allow-Headers": 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
                 "Access-Control-Allow-Methods": 'GET',
                 "Access-Control-Allow-Origin": '*'
-            },              
+            },            
             'body': json.dumps(result)
         }
   else:
@@ -51,10 +53,5 @@ def lambda_handler(event, context):
     result["status"] = "fail-method error"
     return {
         'statusCode': 200,
-        "headers": {
-            "Access-Control-Allow-Headers": 'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token',
-            "Access-Control-Allow-Methods": 'GET',
-            "Access-Control-Allow-Origin": '*'
-        },          
         'body': json.dumps(result)
     }
