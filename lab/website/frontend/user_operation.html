@@ -60,7 +60,7 @@
 
 		      var state = ($(this).is(':checked')) ? '1' : '0';
 					console.log(state)
-	        fetch('https://2s3g37io60.execute-api.us-east-1.amazonaws.com/dev/set_recognition', {
+	        fetch('SET_RECOGNITION_API', {
 	            method: 'POST',
 	            headers: {
 	                'Content-Type': 'application/json'
@@ -92,7 +92,7 @@
 					start_time = today.toISOString().substr(0,19);
 					today.setUTCHours(today.getUTCHours() + 2)
 					end_time = today.toISOString().substr(0,19);
-        fetch('https://2s3g37io60.execute-api.us-east-1.amazonaws.com/dev/query_record', {
+        fetch('QUERY_RECORD_API', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
