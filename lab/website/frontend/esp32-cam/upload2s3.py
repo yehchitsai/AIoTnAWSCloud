@@ -43,7 +43,7 @@ timeforRTC = (year, month, day, weekday, hour + taipei_timezone, minute, second,
 machine.RTC().datetime(timeforRTC)
 print("根據時間調整後的本地時間：%s" %str(time.localtime()))
 
-# 4.1 configure camera
+# 4 configure camera
 led_blink_timed(timer, led_pwm, STANDBY)
 camera_status = camera.init()
 if camera_status:
@@ -58,7 +58,7 @@ else:
 while True:
     headers = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     url = 'API_upload_image'
-    # 4. 拍照並上傳影像到 S3
+    # 5. 拍照並上傳影像到 S3
     led_blink_timed(timer, led_pwm, RUN)
     r = requests.post(url, data=json.dumps({"key": base64.encodebytes(camera.capture())}), headers=headers)
     print(r.text,dir(r))
