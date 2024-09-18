@@ -14,8 +14,9 @@
         - [第五部分 系統整合](#%E7%AC%AC%E4%BA%94%E9%83%A8%E5%88%86-%E7%B3%BB%E7%B5%B1%E6%95%B4%E5%90%88)
 
 
-## 所需相關知識 
+## 所需相關知識
 [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
+
 * Python 基礎概念
 * 介紹單晶片 ESP32-CAM
 * 使用 MicroPython 開發ESP32-CAM
@@ -64,37 +65,42 @@
 [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
 
 說明網頁運作基本原理。
-  - 網際網路模型
-  - HTTP 請求/回應格式
-  - HTTP 請求/回應範例
+  - [網際網路模型](https://ithelp.ithome.com.tw/articles/10345595)
+  - [HTTP 請求/回應格式](https://ithelp.ithome.com.tw/articles/10345737)
+  - [實驗：使用 flask 與 telnet 實作 API](https://ithelp.ithome.com.tw/articles/10345871)
 ### 第四部分 AWS 服務
 [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
-
+)
 介紹本次應用中使用到的 AWS 的服務，包含了 API 呼叫、運算服務、儲存、資料庫與影像處理的人工智慧(AI)應用等。
-  * AWS 雲端基礎
-  * AWS 雲端安全
-  * 申請 AWS 帳戶
-  * Amazon S3
-  * 實驗：建立靜態網站
-  * Amazon API Gateway
-  * 實驗：建立 API Gateway-using mock
-  * AWS Lambda
-  * 實驗：使用 GET 方法查詢資料
-  * 實驗：使用 POST 方法上傳圖片
-  * Amazon DynamoDB
-  * 實驗：上傳EXCEL檔並存入資料庫中
-  * 實驗：查詢資料庫中的資料
-  * Amazon Rekognition
-  * 實驗：人臉辨識從 Amazon S3 讀取
-  * 實驗：文字辨識從 Amazon S3 讀取
-  * 實驗：文字辨識從客戶端上傳
+  * [AWS 雲端基礎](https://ithelp.ithome.com.tw/articles/10346073)
+  * [AWS 雲端安全](https://ithelp.ithome.com.tw/articles/10346204)
+  * [申請 AWS 帳戶](https://ithelp.ithome.com.tw/articles/10346303)
+  * [Amazon S3](https://ithelp.ithome.com.tw/articles/10346476)
+  * [實驗：建立靜態網站](https://ithelp.ithome.com.tw/articles/10346625)
+  * [Amazon API Gateway](https://ithelp.ithome.com.tw/articles/10346864)
+  * [實驗：建立 API Gateway-using mock](https://ithelp.ithome.com.tw/articles/10346936)
+  * [AWS Lambda](https://ithelp.ithome.com.tw/articles/10346986)
+  * [實驗：使用 GET 方法查詢資料](https://ithelp.ithome.com.tw/articles/10347261)
+  * [實驗：使用 POST 方法上傳圖片](https://ithelp.ithome.com.tw/articles/10347402)
+  * [Amazon DynamoDB](https://ithelp.ithome.com.tw/articles/10347619)
+  * [實驗：讀取 EXCEL 檔並存入資料庫中](https://ithelp.ithome.com.tw/articles/10347796)
+  * [實驗：查詢資料庫中的資料](https://ithelp.ithome.com.tw/articles/10347980)
+  * [Amazon Rekognition](https://ithelp.ithome.com.tw/articles/10348189)
+  * [實驗：人臉辨識從 Amazon S3 讀取](https://ithelp.ithome.com.tw/articles/10348191)
+  * [實驗：文字辨識從 Amazon S3 讀取](https://ithelp.ithome.com.tw/articles/10348192)
 ### 第五部分 系統整合
 [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/20129510u6xSlclLMa.png' width='5%'></img>](#%E5%9C%A8-aws-%E4%B8%8A%E9%80%B2%E8%A1%8C%E7%89%A9%E8%81%AF%E7%B6%B2%E8%88%87%E4%BA%BA%E5%B7%A5%E6%99%BA%E6%85%A7%E5%AF%A6%E4%BD%9C) [<img src='https://ithelp.ithome.com.tw/upload/images/20240808/201295100ApjQbzYXJ.png' width='5%'></img>](#bottom)
 
 透過 API Gateway 整合 ESP32-CAM 與 AWS 服務，並透過網頁觀看結果。
-  - 定義 REST API
-  - 實驗：後端-使用 postman 檢驗結果
-  - 實驗：前端-使用 ESP32-CAM 呼叫 REST API
+  - [整合實驗：車牌辨識-定義功能](https://ithelp.ithome.com.tw/articles/10348193)
+  - [實驗：後端 - API Gateway 上傳圖片並使用 POSTMAN 檢驗結果](https://ithelp.ithome.com.tw/articles/10352664)
+  - [實驗：前端 - 使用 ESP32-CAM 呼叫 REST API 上傳圖片](https://ithelp.ithome.com.tw/articles/10352701)
+  - [實驗：後端 - API Gateway 設定車牌辨識選項](https://ithelp.ithome.com.tw/articles/10353347)
+  - [實驗：後端 - 觸動 S3 事件進行文字辨識](https://ithelp.ithome.com.tw/articles/10353398)
+  - [實驗：後端 - API Gateway 查詢辨識記錄](https://ithelp.ithome.com.tw/articles/10353496)
+  - [實驗：前端 - 使用 Web 用戶端 呼叫 REST API](https://ithelp.ithome.com.tw/articles/10353725)
+
+相關程式碼已經上傳到 github，可以到[這裡](https://github.com/yehchitsai/AIoTnAWSCloud)下載
 
 <a id='bottom'></a>
 
