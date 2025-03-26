@@ -4,7 +4,7 @@ import camera
 import time
 import sys
 
-# 設定 Response 類型，讓它支援二進制數據
+# 設定 Response 類型
 Response.default_content_type = 'text/html'
 
 # Wi-Fi 設定
