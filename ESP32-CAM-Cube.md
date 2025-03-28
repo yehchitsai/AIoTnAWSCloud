@@ -35,10 +35,10 @@ ESP32-CAM Cube 教具内容清單包含以下物件：
 11 | 數據傳輸線 100cm | 1 
 12 | 紙盒包装 | 1  
 
-![alt text](images/cube-01.png)
+![alt text](images/cube-01.png)  
 ESP32-CAM Cube 教具正面
 
-![alt text](images/cube-02.png)
+![alt text](images/cube-02.png)  
 ESP32-CAM Cube 教具內側
 
 備註:
@@ -75,57 +75,57 @@ ESP32-CAM | CH340 序列埠模塊 | 說明
  GND | GND | 地線    
  IO0 短路 GND | &nbsp; | ESP32-CAM 進入下載模式  
 
-![alt text](images/cube-05.png)
+![alt text](images/cube-05.png)  
 ESP32-CAM 模塊開發板與 CH340 序列埠模塊進行下載模式的接線圖
 
-![alt text](images/cube-06.png)
+![alt text](images/cube-06.png)  
 實體圖
 
 ### Step 4:安裝 [Thonny](https://thonny.org/)
 
 到 [Thonny](https://thonny.org/) 的官網 https://thonny.org/，根據自己的操作系統下載適合的版本
 
-![在這裡插入圖片描述](images/cube-07.png)
+![在這裡插入圖片描述](images/cube-07.png)  
 根據自己的操作系統下載適合的 Thonny 版本
 
 以下為 Windows 的安裝流程，下載 Windows 版的安裝文件 *thonny-4.0.2.exeg* ，請注意本身的 Windows 與硬體的版本，下載適合自己軟硬體環境的版本，網站會推薦適合的版本 (recommended for you)。
 
-![在這裡插入圖片描述](images/cube-08.png)
+![在這裡插入圖片描述](images/cube-08.png)  
 下載 Windows 操作系統的 Thonny 版本
 
 最好只安裝給自己使用，如下圖所示。
 
-![在這裡插入圖片描述](images/cube-09.png)
+![在這裡插入圖片描述](images/cube-09.png)  
 安裝給自己使用
 
 勾選在桌面建立圖標，這樣避免到時候找不到應用程式。
 
-![在這裡插入圖片描述](images/cube-10.png)
+![在這裡插入圖片描述](images/cube-10.png)  
 建立桌面圖標
 
 第一次啓用時會進行簡單的設定，如下所示，操作畫面則是上方視窗編輯程式區，下方視窗為顯示結果或是進行程式互動區。
 語言(Language)： *繁體中文-TW*
 初始設定(Initial settings)： *Standard*
 
-![在這裡插入圖片描述](./images/thonny_01.png)
+![在這裡插入圖片描述](./images/thonny_01.png)  
 Thonny 操作畫面
 
 ### Step 5:下載 ESP32-CAM 韌體 for MicroPython
 
 進入 [shariltumin/esp32-cam-micropython-2022](https://github.com/shariltumin/esp32-cam-micropython-2022) github倉庫，選擇最新的韌體 **20230717**，如下圖所示。
 
-![在這裡插入圖片描述](./images/esp32-cam_firmware_01.png)
+![在這裡插入圖片描述](./images/esp32-cam_firmware_01.png)  
 選擇 firmwares-20230717
 
 最後選擇的是 firmwares-20230717/ESP32/AI-Thinker-OV2640/WiFi-SSL 這個組態下的 firmware.bin
 
-![在這裡插入圖片描述](./images/esp32-cam_firmware_02.png)
+![在這裡插入圖片描述](./images/esp32-cam_firmware_02.png)  
 
 ### Step 6: 使用 Thonny 燒錄韌體
 **使用 Thonny 設定直釋器**
 打開 Thonny IDE，在點擊畫面狀態列的右下角，選擇*運行->設定直釋器*
 
-![在這裡插入圖片描述](./images/thonny_02.png)
+![在這裡插入圖片描述](./images/thonny_02.png)  
 在 Thonny IDE 中選擇運行->設定直釋器
 
 在 Windows 作業系統中，連接埠選項會自動偵測到已經插入的 CH340 序列埠模塊，所以會顯示 *USB-SERIAL CH340 (COMX)*。
@@ -135,7 +135,7 @@ Thonny 操作畫面
 
 最後點擊 **安裝或更新 MicroPython**
 
-![在這裡插入圖片描述](./images/thonny_03.png)
+![在這裡插入圖片描述](./images/thonny_03.png)  
 設定直釋器到 ESP32-CAM
 
 安裝並更新 MicroPython，指定連接埠(Port)跟燒錄檔韌體(Firmware)
@@ -147,25 +147,25 @@ Thonny 操作畫面
 
 接著點擊**安裝**
 
-![在這裡插入圖片描述](./images/cube-12.png)
+![在這裡插入圖片描述](./images/cube-12.png)  
 安裝並更新 MicroPython
 
 點擊**安裝**後要注意是否正常運作，正常運作畫面如下。
 
-![在這裡插入圖片描述](./images/thonny_05.png)
+![在這裡插入圖片描述](./images/thonny_05.png)  
 安裝並更新 MicroPython 運行畫面
 
 ### Step 7: 裝回底座
 
-![在這裡插入圖片描述](./images/cube-13.png)
+![在這裡插入圖片描述](./images/cube-13.png)  
 燒錄完成後，將 ESP32-CAM 插回主機板插槽固定。
 
-![在這裡插入圖片描述](./images/cube-14.png)
+![在這裡插入圖片描述](./images/cube-14.png)  
 準備蓋回上蓋時，先將線路簡單整理到上方空間
  
-![在這裡插入圖片描述](./images/cube-15.png)
+![在這裡插入圖片描述](./images/cube-15.png)  
 再蓋上前，用手指確認鏡頭是否有有在正確開孔的位置、通常蓋上前會需要稍微摳一下，調整到正確位置後，再將上蓋完整蓋好。
  
-![在這裡插入圖片描述](./images/cube-16.png)
+![在這裡插入圖片描述](./images/cube-16.png)  
 安裝完成後，按下按鈕確認啟動。
 
