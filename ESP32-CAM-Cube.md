@@ -42,7 +42,7 @@ ESP32-CAM Cube 教具正面
 ESP32-CAM Cube 教具內側
 
 備註:
-- 教具寄出前，皆會預先燒錄 MicroPython，並且測試，讓使用者到手即可使用。
+- 教具寄出前，皆會預先燒錄 MicroPython，並且測試（[測試程式](lab/website/frontend/esp32-cam/hardware_check.py)），讓使用者到手即可使用。
 - 本教具以下皆稱為Cube。
 - 連接埠每台電腦不同，挑選有USB Serial @ 開頭的(有可能不同請先確認連接埠)，本例為USB Serial @ COM3。
 
