@@ -13,6 +13,7 @@
     - [Step 5:下載 ESP32-CAM 韌體 for MicroPython](#step-5下載-esp32-cam-韌體-for-micropython)
     - [Step 6: 使用 Thonny 燒錄韌體](#step-6-使用-thonny-燒錄韌體)
     - [Step 7: 裝回底座](#step-7-裝回底座)
+  - [使用 ESP32-CAM 進行開發](#使用-esp32-cam-進行開發)
 
 <!-- /TOC -->
 ## 說明
@@ -169,3 +170,28 @@ Thonny 操作畫面
 ![在這裡插入圖片描述](./images/cube-16.png)  
 安裝完成後，按下按鈕確認啟動。
 
+## 使用 ESP32-CAM 進行開發
+
+![在這裡插入圖片描述](./images/cube-17.jpg)  
+連接資料傳輸線進行開發
+
+使用資料傳輸線連接 cube 的 micro USB 接口，並打開電腦端的 Thonny 軟體，設定好右下角的連接埠，就可以開始進行 micropython 的程式開發，可以參考以下的一系列文章：
+- [D09-使用 MicroPython 檔案存取 - io](https://ithelp.ithome.com.tw/articles/10344852)
+- [D10-使用 MicroPython 控制燈號、撰寫 ISR - machine](https://ithelp.ithome.com.tw/articles/10344998)
+- [D11-使用 MicroPython 連接 Wi-Fi、同步 NTP](https://ithelp.ithome.com.tw/articles/10345000)
+- [D12-使用 MicroPython 安裝新模組與使用](https://ithelp.ithome.com.tw/articles/10345284)
+- [D13-使用 MicroPython 拍照-ESP32-CAM](https://ithelp.ithome.com.tw/articles/10345443)
+- [使用 socket 的網頁攝影機原始碼](./lab/website/frontend/esp32-cam/web_cam.py)
+- [使用 microdot 的網頁攝影機原始碼](./lab/website/frontend/esp32-cam/web_camera_microdot.py)
+- [檢查教材相關硬體程式原始碼](./lab/website/frontend/esp32-cam/hardware_check.py)
+
+使用 [microdot](https://github.com/miguelgrinberg/microdot) 時要注意修改 microdot.py 原始碼第 8 行改為`import uasyncio as asyncio`
+
+```python
+...
+# import asyncio
+import uasyncio as asyncio
+...
+```
+![在這裡插入圖片描述](./images/cube-18.png)  
+microdot.py原始碼
