@@ -14,6 +14,8 @@
     - [Step 6: 使用 Thonny 燒錄韌體](#step-6-使用-thonny-燒錄韌體)
     - [Step 7: 裝回底座](#step-7-裝回底座)
   - [使用 ESP32-CAM 進行開發](#使用-esp32-cam-進行開發)
+    - [使用 CUBE 建立移動的網路攝影機](#使用-cube-建立移動的網路攝影機)
+    - [移動的網路攝影機進階版-使用 microdot](#移動的網路攝影機進階版-使用-microdot)
 
 <!-- /TOC -->
 ## 說明
@@ -186,7 +188,12 @@ Thonny 操作畫面
 - [使用 microdot 的網頁攝影機原始碼](./lab/website/frontend/esp32-cam/web_camera_microdot.py)
 - [檢查教材相關硬體程式原始碼](./lab/website/frontend/esp32-cam/hardware_check.py)
 
-使用 [microdot](https://github.com/miguelgrinberg/microdot) 時要注意修改 microdot.py 原始碼第 8 行改為`import uasyncio as asyncio`
+### 使用 CUBE 建立移動的網路攝影機
+這是一篇說明如何使用 ESP32-CAM Cube 教具來完成[移動的網路攝影機設計教學](./使用%20CUBE%20建立移動的網路攝影機.md)
+
+### 移動的網路攝影機進階版-使用 microdot
+Microdot 是一個受 Flask 啟發的簡約 Python Web 框架。由於體積小，它可以在微控制器等資源有限的系統上運作。標準 Python（CPython）和 MicroPython 均支援。
+在 MicroPython 中使用 [microdot](https://github.com/miguelgrinberg/microdot) 時要注意修改 microdot.py 原始碼第 8 行改為`import uasyncio as asyncio`
 
 ```python
 ...
