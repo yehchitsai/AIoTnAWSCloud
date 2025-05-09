@@ -66,13 +66,19 @@ def config(request):
     except Exception as e:
         return Response(json.dumps({"error": str(e)}), status=500)
 
+# 1. 設定 LED 燈號
+from led_Test import *
 # 連接 Wi-Fi 網路
+led_blink_timed(led_timer, led_pin, WIFI)
 import Wifi_Test
 ip = Wifi_Test.get_address()
 # 啟動攝影機
+led_blink_timed(led_timer, led_pin, CAMERA)
 init_camera()
 # 啟動伺服器
 try:
     app.run(port=80)
+    led_blink_timed(led_timer, led_pin, STANDBY)
 except OSError as e:
     print("伺服器啟動錯誤{}".format(e))
+    led_blink_timed(led_timer, led_pin, ERROR)

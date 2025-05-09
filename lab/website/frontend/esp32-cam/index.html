@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32-CAM 控制面板</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        img { width: 100%; max-width: 640px; margin-top: 10px; }
+        .control-panel { margin: 10px; }
+        select, input { margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>ESP32-CAM 控制面板</h1>
+    <img id="camera_feed" src="/capture" />
+
+    <div class="control-panel">
+        <label>解析度：</label>
+        <select id="framesize">
+            <option value="10">UXGA</option>
+            <option value="9">SXGA</option>
+            <option value="8">XGA</option>
+            <option value="7">SVGA</option>
+            <option value="6">VGA</option>
+            <option value="5" selected>QVGA</option>
+        </select><br/>
+
+        <label>品質：</label>
+        <input type="range" id="quality" min="10" max="63" value="10"><br/>
+
+        <label>亮度：</label>
+        <input type="range" id="brightness" min="-2" max="2" value="0"><br/>
+
+        <label>對比度：</label>
+        <input type="range" id="contrast" min="-2" max="2" value="0"><br/>
+
+        <label>飽和度：</label>
+        <input type="range" id="saturation" min="-2" max="2" value="0"><br/>
+
+        <button onclick="updateSettings()">更新設定</button><br/>
+        <button onclick="capture()">擷取圖片</button>        
+    </div>
+
+    <script>
+        function capture() {
+            var link = document.createElement('a');
+            link.href = '/capture';
+            link.download = 'esp32_image.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }    
+        function updateSettings() {
+            const settings = {
+                framesize: document.getElementById('framesize').value,
+                quality: document.getElementById('quality').value,
+                brightness: document.getElementById('brightness').value,
+                contrast: document.getElementById('contrast').value,
+                saturation: document.getElementById('saturation').value
+            };
+
+            fetch('/config', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(settings)
+            }).then(response => response.json())
+              .then(data => console.log(data));
+        }
+
+        // 每 0.5 秒更新影像
+        setInterval(() => {
+            document.getElementById('camera_feed').src = "/capture?" + new Date().getTime();
+        }, 500);
+    </script>
+</body>
+</html>
